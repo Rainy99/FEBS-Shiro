@@ -1,12 +1,11 @@
 package cc.mrbird.febs.common.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.lionsoul.ip2region.DataBlock;
 import org.lionsoul.ip2region.DbConfig;
 import org.lionsoul.ip2region.DbSearcher;
 import org.lionsoul.ip2region.Util;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,9 +15,8 @@ import java.util.Objects;
 /**
  * @author MrBird
  */
+@Slf4j
 public class AddressUtil {
-
-    private static Logger log = LoggerFactory.getLogger(AddressUtil.class);
 
     public static String getCityInfo(String ip) {
         DbSearcher searcher = null;
